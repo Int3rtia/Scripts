@@ -1,4 +1,6 @@
 --[[
+Cracked by Int3rtia
+
     OxyHub rhythm autoplay
     - readable reconstruction.
     This is not the original source. Names, formatting, cleanup in this file being added during analysis.
