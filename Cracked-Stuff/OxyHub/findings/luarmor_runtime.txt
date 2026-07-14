@@ -1,0 +1,13 @@
+DONE_ERROR	steps=4821980	functions=370	visits=17134	strings=222	tables=147	table_strings=402	result=[string "Luarmor payload compact runtime trace"]:1: invalid argument #1 to 'create' (size out of range)
+[string "Luarmor payload compact runtime trace"]:1 function jB
+[string "Luarmor payload compact runtime trace"]:1
+[string "Luarmor payload compact runtime trace"]:1
+[string "Luarmor payload compact runtime trace"]:1
+[string "Luarmor payload compact runtime trace"]:1
+[string "Luarmor payload compact runtime trace"]:1
+[string "Luarmor payload compact runtime trace"]:1 function Yg
+[string "Luarmor payload compact runtime trace"]:1 function Fg
+[string "Luarmor payload compact runtime trace"]:1 function b
+[string "Luarmor payload compact runtime trace"]:1
+:207
+
