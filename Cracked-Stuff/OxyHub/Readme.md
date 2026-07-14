@@ -10,6 +10,11 @@ However, this is still meaningful progress for me. I managed to recover and unde
 
 Even if the result is not complete yet, it represents hours of debugging, testing, failed attempts, and actual progress. I plan to keep improving it as I learn more.
 
+## Original
+```lua
+https://api.luarmor.net/files/v4/loaders/e4f879e72b8fcf03f318ec5e76201ec7.lua'))()
+```
+
 ## Reference
 
 - [Auto Play Module](https://github.com/Int3rtia/Scripts/blob/main/Cracked-Stuff/OxyHub/rhythm-autoplay.lua)
