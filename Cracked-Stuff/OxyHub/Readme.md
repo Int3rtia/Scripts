@@ -12,7 +12,7 @@ Even if the result is not complete yet, it represents hours of debugging, testin
 
 ## Original
 ```lua
-https://api.luarmor.net/files/v4/loaders/e4f879e72b8fcf03f318ec5e76201ec7.lua'))()
+https://api.luarmor.net/files/v4/loaders/e4f879e72b8fcf03f318ec5e76201ec7.lua
 ```
 
 ## Reference
