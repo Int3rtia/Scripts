@@ -1,0 +1,2768 @@
+-- Luarmor V4 Superflow bootstrap: function 1
+-- graph table: 1
+-- registers: 41 | VM variant: 1
+-- nested functions: 2,3,4,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,90,91,92,94,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,123,124,125,126,127,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,167,168,169,170,171,176,177,178,179,180,181,182,183,184,185,186,187,188,193,194,195,196,197,198,199,200,201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220,221,224,225,226,227,228,229,230,231,232,233,234,235,237,238,239,240,241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,263,264,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,285,286,287,288,289,291,292,293,294,295,296,297,298,299,300,301,302,306,307,308,309,310,311,312,313,314,316,317,318,319,320,321,322,325,326,328,329,330,331,332,333,334,335,336,337,338,339,340,341,342,343,344,345,346,347,348,349,350,351,352,353,354,355,356,359,360,361,362,363,364,365,366,367,368,369,370,371,372,373,374
+-- Operand streams: A, R, O, K, L, W. Exact handlers are in ../luarmor_superflow_handlers/.
+
+-- 0001  OP_187  R=0 L=0 W=998
+--       effect: pc=operandW[pc];
+-- 0002  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0003  OP_170  R=0 L=40 W=0
+--       effect: registers[operandL[pc]]=(operandL);
+-- 0004  OP_215  A=15 R=353 O=934 L=39 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0005  OP_215  A=0 R=353 O=934 L=40 W=4
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0006  OP_215  A=933 R=137 O=1086 L=39 W=1464
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0007  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0008  OP_187  R=0 L=0 W=933
+--       effect: pc=operandW[pc];
+-- 0009  OP_070  R=559 O=239 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0010  OP_124  R=1212 O=22345 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 0011  OP_070  R=352 O=-22647 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0012  OP_152  R=438 O=1136 L=18 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0013  OP_215  A=1130 R=841 O=691 L=23 W=1172
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0014  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0015  OP_187  R=0 L=0 W=1130
+--       effect: pc=operandW[pc];
+-- 0016  OP_174  A=function_002 R=15 L=0 W=168
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0017  OP_152  R=160 O=511 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0018  OP_174  A=function_003 R=15 L=0 W=134
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0019  OP_152  R=1585 O=460 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0020  OP_187  R=0 L=0 W=1238
+--       effect: pc=operandW[pc];
+-- 0021  OP_152  R=2158 O=494 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0022  OP_174  A=function_004 R=15 L=0 W=135
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0023  OP_152  R=383 O=0 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0024  OP_174  A=function_007 R=15 L=0 W=233
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0025  OP_152  R=2270 O=352 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0026  OP_187  R=0 L=0 W=485
+--       effect: pc=operandW[pc];
+-- 0027  OP_215  A="WaitForChild" R=1425 O=146 L=14 W=424
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0028  OP_174  A=function_008 R=15 L=0 W=218
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0029  OP_152  R=616 O=212 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0030  OP_187  R=0 L=0 W=78
+--       effect: pc=operandW[pc];
+-- 0031  OP_174  A=function_009 R=15 L=0 W=256
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0032  OP_152  R=1848 O=209 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0033  OP_215  A="AbsolutePosition" R=1840 O=123 L=14 W=1355
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0034  OP_174  A=function_010 R=15 L=0 W=244
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0035  OP_152  R=1857 O=224 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0036  OP_174  A=function_011 R=15 L=0 W=210
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0037  OP_152  R=1470 O=446 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0038  OP_174  A=function_012 R=15 L=0 W=366
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0039  OP_152  R=1434 O=442 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0040  OP_174  A=function_013 R=15 L=0 W=259
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0041  OP_152  R=448 O=439 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0042  OP_187  R=0 L=0 W=1092
+--       effect: pc=operandW[pc];
+-- 0043  OP_152  R=1319 O=530 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0044  OP_174  A=function_014 R=15 L=0 W=310
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0045  OP_152  R=983 O=291 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0046  OP_187  R=0 L=0 W=884
+--       effect: pc=operandW[pc];
+-- 0047  OP_174  A=function_015 R=15 L=0 W=270
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0048  OP_152  R=243 O=412 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0049  OP_174  A=function_016 R=15 L=0 W=352
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0050  OP_152  R=1987 O=205 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0051  OP_215  A="Luraph" R=2012 O=182 L=14 W=1293
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0052  OP_187  R=0 L=0 W=420
+--       effect: pc=operandW[pc];
+-- 0053  OP_174  A=function_017 R=15 L=0 W=8
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0054  OP_152  R=1880 O=257 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0055  OP_174  A=function_018 R=15 L=0 W=122
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0056  OP_152  R=2140 O=236 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0057  OP_174  A=function_019 R=15 L=0 W=48
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0058  OP_187  R=0 L=0 W=1354
+--       effect: pc=operandW[pc];
+-- 0059  OP_174  A=function_020 R=15 L=0 W=84
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0060  OP_152  R=575 O=518 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0061  OP_174  A=function_021 R=15 L=0 W=38
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0062  OP_152  R=1630 O=280 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0063  OP_174  A=function_022 R=15 L=0 W=85
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0064  OP_152  R=1274 O=330 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0065  OP_215  A="string" R=1215 O=133 L=14 W=640
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0066  OP_187  R=0 L=0 W=1370
+--       effect: pc=operandW[pc];
+-- 0067  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0068  OP_102  R=0 L=34 W=0
+--       effect: registers[operandL[pc]]=opcodeStream;
+-- 0069  OP_215  A=15 R=362 O=1372 L=39 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0070  OP_215  A=152 R=362 O=1372 L=34 W=695
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0071  OP_215  A=58 R=624 O=651 L=39 W=124
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0072  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0073  OP_187  R=0 L=0 W=58
+--       effect: pc=operandW[pc];
+-- 0074  OP_152  R=1769 O=45 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0075  OP_174  A=function_023 R=15 L=0 W=257
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0076  OP_152  R=1715 O=538 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0077  OP_174  A=function_024 R=15 L=0 W=172
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0078  OP_187  R=0 L=0 W=944
+--       effect: pc=operandW[pc];
+-- 0079  OP_187  R=0 L=0 W=1278
+--       effect: pc=operandW[pc];
+-- 0080  OP_017  R=672 O="new" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 0081  OP_152  R=2249 O=94 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0082  OP_174  A=function_025 R=15 L=0 W=327
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0083  OP_152  R=1735 O=311 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0084  OP_174  A=function_026 R=15 L=0 W=163
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0085  OP_152  R=1466 O=260 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0086  OP_174  A=function_027 R=15 L=0 W=369
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0087  OP_152  R=604 O=457 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0088  OP_215  A="Your Lua environment does not support load or loadstring, therefore you are unable to use Luraph's 'LPH_NO_UPVALUES' macro." R=1838 O=184 L=14 W=2039
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0089  OP_187  R=0 L=0 W=260
+--       effect: pc=operandW[pc];
+-- 0090  OP_152  R=149 O=397 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0091  OP_174  A=function_029 R=15 L=0 W=288
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0092  OP_152  R=1118 O=466 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0093  OP_187  R=0 L=0 W=379
+--       effect: pc=operandW[pc];
+-- 0094  OP_174  A=function_030 R=15 L=0 W=242
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0095  OP_152  R=722 O=407 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0096  OP_174  A=function_031 R=15 L=0 W=178
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0097  OP_152  R=2372 O=427 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0098  OP_174  A=function_032 R=15 L=0 W=161
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0099  OP_152  R=1915 O=537 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0100  OP_174  A=function_033 R=15 L=0 W=295
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0101  OP_152  R=727 O=312 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0102  OP_174  A=function_034 R=15 L=0 W=133
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0103  OP_152  R=819 O=414 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0104  OP_187  R=0 L=0 W=526
+--       effect: pc=operandW[pc];
+-- 0105  OP_152  R=1995 O=288 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0106  OP_011  R=131 L=14 W=149
+--       effect: C=(registers);U=operandL[pc];
+-- 0107  OP_211  R=12 L=24 W=132
+--       effect: C=(C[U]);
+-- 0108  OP_275  A="IsClient" R=1364 O=142 L=183 W=1403
+--       effect: U=(operandO[pc]);c=operandA[pc];
+-- 0109  OP_109  R=46 L=211 W=15
+--       effect: C[U]=(c);
+-- 0110  OP_276  R=2245 O="table" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0111  OP_187  R=0 L=0 W=1056
+--       effect: pc=operandW[pc];
+-- 0112  OP_152  R=411 O=286 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0113  OP_174  A=function_035 R=15 L=0 W=169
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0114  OP_152  R=1753 O=517 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0115  OP_276  R=846 O="task" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0116  OP_187  R=0 L=0 W=695
+--       effect: pc=operandW[pc];
+-- 0117  OP_174  A=function_036 R=15 L=0 W=90
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0118  OP_152  R=2267 O=458 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0119  OP_276  R=1983 O="typeof" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0120  OP_187  R=0 L=0 W=152
+--       effect: pc=operandW[pc];
+-- 0121  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0122  OP_010  R=22 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0123  OP_284  R=25 L=7 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 0124  OP_129  R=471 O=120 K=133 L=1215 W=26
+--       effect: (registers)[operandW[pc]]=(operandK[pc]+operandO[pc]);
+-- 0125  OP_182  R=25 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 0126  OP_124  R=785 O=26978 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 0127  OP_070  R=1744 O=-26987 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0128  OP_152  R=1660 O=1233 L=23 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0129  OP_129  R=1969 O=299 K=187 L=770 W=25
+--       effect: (registers)[operandW[pc]]=(operandK[pc]+operandO[pc]);
+-- 0130  OP_114  R=345 O=237 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]-operandO[pc];
+-- 0131  OP_124  R=612 O=26733 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 0132  OP_070  R=1209 O=-26967 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0133  OP_152  R=1489 O=1082 L=22 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0134  OP_215  A=686 R=1694 O=284 L=23 W=1633
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0135  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0136  OP_187  R=0 L=0 W=686
+--       effect: pc=operandW[pc];
+-- 0137  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0138  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0139  OP_215  A=0 R=1393 O=1186 L=38 W=4
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0140  OP_215  A=1182 R=374 O=458 L=39 W=1067
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0141  OP_110  R=33 L=227 W=40
+--       effect: C=operandR[pc];U=operandW[pc];for M=C,U,1 do c=registers;R=M;M=nil;(c)[R]=M;end;
+-- 0142  OP_187  R=0 L=0 W=1182
+--       effect: pc=operandW[pc];
+-- 0143  OP_152  R=446 O=345 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0144  OP_174  A=function_037 R=15 L=0 W=123
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0145  OP_152  R=1162 O=520 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0146  OP_187  R=0 L=0 W=164
+--       effect: pc=operandW[pc];
+-- 0147  OP_174  A=function_038 R=15 L=0 W=29
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0148  OP_152  R=447 O=332 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0149  OP_215  A="defer" R=121 O=33 L=14 W=1921
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0150  OP_174  A=function_039 R=15 L=0 W=81
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0151  OP_152  R=2386 O=221 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0152  OP_187  R=0 L=0 W=255
+--       effect: pc=operandW[pc];
+-- 0153  OP_152  R=2342 O=15 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0154  OP_174  A=function_040 R=15 L=0 W=68
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0155  OP_152  R=1110 O=253 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0156  OP_187  R=0 L=0 W=665
+--       effect: pc=operandW[pc];
+-- 0157  OP_215  A="error" R=574 O=86 L=14 W=1929
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0158  OP_174  A=function_041 R=15 L=0 W=11
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0159  OP_152  R=2296 O=363 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0160  OP_187  R=0 L=0 W=680
+--       effect: pc=operandW[pc];
+-- 0161  OP_152  R=1032 O=365 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0162  OP_215  A="char" R=1795 O=19 L=14 W=957
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0163  OP_276  R=1655 O="debug" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0164  OP_187  R=0 L=0 W=73
+--       effect: pc=operandW[pc];
+-- 0165  OP_174  A=function_042 R=15 L=0 W=46
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0166  OP_152  R=1429 O=279 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0167  OP_174  A=function_043 R=15 L=0 W=56
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0168  OP_187  R=0 L=0 W=1142
+--       effect: pc=operandW[pc];
+-- 0169  OP_174  A=function_044 R=189 L=0 W=274
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0170  OP_152  R=2154 O=228 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0171  OP_215  A="[C]" R=707 O=69 L=14 W=788
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0172  OP_174  A=function_045 R=15 L=0 W=317
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0173  OP_152  R=954 O=287 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0174  OP_174  A=function_046 R=15 L=0 W=306
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0175  OP_152  R=2265 O=305 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0176  OP_276  R=405 O="tonumber" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0177  OP_187  R=0 L=0 W=548
+--       effect: pc=operandW[pc];
+-- 0178  OP_215  A="info" R=1718 O=47 L=14 W=1965
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0179  OP_174  A=function_047 R=15 L=0 W=339
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0180  OP_152  R=1958 O=324 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0181  OP_174  A=function_049 R=15 L=0 W=338
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0182  OP_152  R=806 O=262 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0183  OP_174  A=function_050 R=15 L=0 W=301
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0184  OP_187  R=0 L=0 W=610
+--       effect: pc=operandW[pc];
+-- 0185  OP_215  A="2" R=1345 O=199 L=14 W=752
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0186  OP_011  R=210 L=14 W=215
+--       effect: C=(registers);U=operandL[pc];
+-- 0187  OP_211  R=70 L=100 W=251
+--       effect: C=(C[U]);
+-- 0188  OP_275  A="EnumType" R=1963 O=157 L=223 W=1238
+--       effect: U=(operandO[pc]);c=operandA[pc];
+-- 0189  OP_109  R=53 L=227 W=8
+--       effect: C[U]=(c);
+-- 0190  OP_174  A=function_051 R=15 L=0 W=83
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0191  OP_152  R=1391 O=369 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0192  OP_215  A="Path2D" R=966 O=104 L=14 W=1673
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0193  OP_187  R=0 L=0 W=736
+--       effect: pc=operandW[pc];
+-- 0194  OP_152  R=1852 O=176 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0195  OP_174  A=function_052 R=15 L=0 W=219
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0196  OP_152  R=2099 O=444 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0197  OP_174  A=function_053 R=15 L=0 W=132
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0198  OP_152  R=818 O=297 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0199  OP_187  R=0 L=0 W=30
+--       effect: pc=operandW[pc];
+-- 0200  OP_174  A=function_054 R=15 L=0 W=331
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0201  OP_152  R=2063 O=421 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0202  OP_215  A="EnumItem" R=1001 O=160 L=14 W=246
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0203  OP_187  R=0 L=0 W=303
+--       effect: pc=operandW[pc];
+-- 0204  OP_284  R=26 L=17 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 0205  OP_195  R=27 K="\u001a" L=2189 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 0206  OP_182  R=26 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 0207  OP_208  R=26 L=73 W=25
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]]-registers[operandR[pc]]);
+-- 0208  OP_124  R=572 O=23443 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 0209  OP_070  R=1546 O=-23788 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0210  OP_152  R=1897 O=1047 L=23 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0211  OP_215  A=218 R=1711 O=1313 L=23 W=499
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0212  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0213  OP_187  R=0 L=0 W=218
+--       effect: pc=operandW[pc];
+-- 0214  OP_174  A=function_055 R=15 L=0 W=360
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0215  OP_152  R=1286 O=426 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0216  OP_174  A=function_056 R=15 L=0 W=287
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0217  OP_152  R=215 O=486 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0218  OP_187  R=0 L=0 W=1312
+--       effect: pc=operandW[pc];
+-- 0219  OP_215  A="tonumber" R=558 O=74 L=14 W=405
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0220  OP_174  A=function_057 R=165 L=0 W=238
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0221  OP_152  R=217 O=374 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0222  OP_276  R=1827 O="next" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0223  OP_152  R=671 O=28 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0224  OP_174  A=function_058 R=15 L=0 W=316
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0225  OP_187  R=0 L=0 W=1046
+--       effect: pc=operandW[pc];
+-- 0226  OP_152  R=1374 O=334 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0227  OP_174  A=function_059 R=15 L=0 W=205
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0228  OP_152  R=1960 O=522 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0229  OP_174  A=function_060 R=15 L=0 W=290
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0230  OP_152  R=1302 O=509 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0231  OP_215  A="PostAsync" R=511 O=151 L=14 W=607
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0232  OP_187  R=0 L=0 W=807
+--       effect: pc=operandW[pc];
+-- 0233  OP_152  R=271 O=329 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0234  OP_215  A="IsStudio" R=195 O=143 L=14 W=859
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0235  OP_174  A=function_061 R=15 L=0 W=27
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0236  OP_152  R=2358 O=492 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0237  OP_187  R=0 L=0 W=594
+--       effect: pc=operandW[pc];
+-- 0238  OP_174  A=function_062 R=15 L=0 W=367
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0239  OP_152  R=1508 O=536 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0240  OP_215  A="ClassName" R=361 O=135 L=14 W=1846
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0241  OP_187  R=0 L=0 W=1242
+--       effect: pc=operandW[pc];
+-- 0242  OP_152  R=335 O=475 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0243  OP_215  A="AncestryChanged" R=886 O=136 L=14 W=698
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0244  OP_174  A=function_063 R=15 L=0 W=285
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0245  OP_152  R=2309 O=474 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0246  OP_187  R=0 L=0 W=788
+--       effect: pc=operandW[pc];
+-- 0247  OP_174  A=function_065 R=15 L=0 W=93
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0248  OP_152  R=936 O=314 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0249  OP_174  A=function_066 R=15 L=0 W=21
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0250  OP_187  R=0 L=0 W=433
+--       effect: pc=operandW[pc];
+-- 0251  OP_276  R=1929 O="error" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0252  OP_152  R=745 O=43 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0253  OP_174  A=function_067 R=15 L=0 W=126
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0254  OP_152  R=498 O=301 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0255  OP_187  R=0 L=0 W=599
+--       effect: pc=operandW[pc];
+-- 0256  OP_174  A=function_068 R=15 L=0 W=17
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0257  OP_152  R=2183 O=248 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0258  OP_174  A=function_069 R=15 L=0 W=44
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0259  OP_152  R=474 O=264 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0260  OP_187  R=0 L=0 W=344
+--       effect: pc=operandW[pc];
+-- 0261  OP_174  A=function_070 R=15 L=0 W=216
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0262  OP_152  R=1316 O=346 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0263  OP_174  A=function_071 R=15 L=0 W=208
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0264  OP_152  R=869 O=456 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0265  OP_174  A=function_072 R=15 L=0 W=349
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0266  OP_152  R=1563 O=290 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0267  OP_174  A=function_073 R=15 L=0 W=230
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0268  OP_152  R=1153 O=461 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0269  OP_174  A=function_074 R=15 L=0 W=279
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0270  OP_152  R=1404 O=296 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0271  OP_174  A=function_075 R=15 L=0 W=246
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0272  OP_187  R=0 L=0 W=290
+--       effect: pc=operandW[pc];
+-- 0273  OP_276  R=2307 O="workspace" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0274  OP_152  R=991 O=92 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0275  OP_174  A=function_076 R=15 L=0 W=345
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0276  OP_152  R=2227 O=206 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0277  OP_174  A=function_077 R=15 L=0 W=138
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0278  OP_152  R=739 O=447 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0279  OP_174  A=function_078 R=15 L=0 W=319
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0280  OP_152  R=827 O=504 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0281  OP_174  A=function_079 R=15 L=0 W=227
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0282  OP_152  R=947 O=463 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0283  OP_187  R=0 L=0 W=818
+--       effect: pc=operandW[pc];
+-- 0284  OP_187  R=0 L=0 W=120
+--       effect: pc=operandW[pc];
+-- 0285  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0286  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0287  OP_215  A=15 R=1291 O=1245 L=38 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0288  OP_215  A=772 R=1872 O=485 L=39 W=1946
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0289  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0290  OP_187  R=0 L=0 W=772
+--       effect: pc=operandW[pc];
+-- 0291  OP_152  R=1762 O=271 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0292  OP_215  A="FromValue" R=2286 O=166 L=14 W=1414
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0293  OP_215  A="gsub" R=1828 O=22 L=14 W=221
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0294  OP_187  R=0 L=0 W=1260
+--       effect: pc=operandW[pc];
+-- 0295  OP_152  R=1412 O=384 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0296  OP_174  A=function_080 R=15 L=0 W=60
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0297  OP_152  R=484 O=480 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0298  OP_215  A="isvararg" R=803 O=62 L=14 W=767
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0299  OP_187  R=0 L=0 W=1037
+--       effect: pc=operandW[pc];
+-- 0300  OP_276  R=717 O="identifyexecutor" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0301  OP_152  R=932 O=126 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0302  OP_174  A=function_081 R=15 L=0 W=370
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0303  OP_187  R=0 L=0 W=412
+--       effect: pc=operandW[pc];
+-- 0304  OP_174  A=function_082 R=15 L=0 W=137
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0305  OP_152  R=1798 O=281 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0306  OP_215  A="xpcall" R=1480 O=81 L=14 W=1981
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0307  OP_187  R=0 L=0 W=283
+--       effect: pc=operandW[pc];
+-- 0308  OP_152  R=1471 O=54 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0309  OP_276  R=408 O="coroutine" L=241 W=63
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0310  OP_152  R=2253 O=17 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0311  OP_215  A="5" R=2226 O=198 L=14 W=1670
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0312  OP_174  A=function_083 R=15 L=0 W=65
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0313  OP_187  R=0 L=0 W=384
+--       effect: pc=operandW[pc];
+-- 0314  OP_174  A=function_084 R=15 L=0 W=298
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0315  OP_152  R=1369 O=497 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0316  OP_174  A=function_085 R=15 L=0 W=243
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0317  OP_152  R=2082 O=367 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0318  OP_174  A=function_086 R=15 L=0 W=260
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0319  OP_152  R=1189 O=512 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0320  OP_187  R=0 L=0 W=1256
+--       effect: pc=operandW[pc];
+-- 0321  OP_174  A=function_087 R=15 L=0 W=296
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0322  OP_152  R=988 O=282 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0323  OP_174  A=function_088 R=15 L=0 W=201
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0324  OP_152  R=1225 O=263 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0325  OP_215  A="delay" R=2251 O=41 L=14 W=1478
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0326  OP_276  R=2375 O="Enum" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0327  OP_152  R=519 O=154 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0328  OP_187  R=0 L=0 W=949
+--       effect: pc=operandW[pc];
+-- 0329  OP_152  R=1080 O=261 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0330  OP_011  R=34 L=14 W=140
+--       effect: C=(registers);U=operandL[pc];
+-- 0331  OP_211  R=133 L=213 W=78
+--       effect: C=(C[U]);
+-- 0332  OP_275  A="getinfo" R=1754 O=55 L=162 W=1516
+--       effect: U=(operandO[pc]);c=operandA[pc];
+-- 0333  OP_109  R=134 L=245 W=146
+--       effect: C[U]=(c);
+-- 0334  OP_174  A=function_090 R=15 L=0 W=220
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0335  OP_152  R=839 O=315 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0336  OP_215  A="7" R=2037 O=197 L=14 W=996
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0337  OP_174  A=function_091 R=15 L=0 W=180
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0338  OP_187  R=0 L=0 W=1360
+--       effect: pc=operandW[pc];
+-- 0339  OP_170  R=0 L=40 W=0
+--       effect: registers[operandL[pc]]=(operandL);
+-- 0340  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0341  OP_215  A=25 R=385 O=207 L=40 W=56
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0342  OP_215  A=203 R=2218 O=977 L=39 W=2211
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0343  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0344  OP_187  R=0 L=0 W=203
+--       effect: pc=operandW[pc];
+-- 0345  OP_215  A="StarterPlayer" R=1988 O=145 L=14 W=835
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0346  OP_215  A="format" R=403 O=12 L=14 W=1428
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0347  OP_174  A=function_092 R=15 L=0 W=32
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0348  OP_152  R=1817 O=354 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0349  OP_174  A=function_094 R=15 L=0 W=91
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0350  OP_187  R=0 L=0 W=715
+--       effect: pc=operandW[pc];
+-- 0351  OP_152  R=1450 O=402 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0352  OP_174  A=function_096 R=15 L=0 W=62
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0353  OP_152  R=2224 O=364 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0354  OP_174  A=function_097 R=15 L=0 W=66
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0355  OP_152  R=2215 O=335 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0356  OP_187  R=0 L=0 W=891
+--       effect: pc=operandW[pc];
+-- 0357  OP_174  A=function_098 R=15 L=0 W=33
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0358  OP_152  R=888 O=513 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0359  OP_215  A="linedefined" R=308 O=72 L=14 W=1616
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0360  OP_174  A=function_099 R=15 L=0 W=86
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0361  OP_187  R=0 L=0 W=294
+--       effect: pc=operandW[pc];
+-- 0362  OP_152  R=1075 O=49 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0363  OP_174  A=function_100 R=15 L=0 W=75
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0364  OP_152  R=518 O=317 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0365  OP_215  A="wrap" R=715 O=96 L=14 W=1040
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0366  OP_187  R=0 L=0 W=356
+--       effect: pc=operandW[pc];
+-- 0367  OP_174  A=function_101 R=15 L=0 W=139
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0368  OP_152  R=1623 O=401 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0369  OP_215  A="userdata" R=862 O=132 L=14 W=2198
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0370  OP_174  A=function_102 R=15 L=0 W=140
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0371  OP_152  R=1923 O=244 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0372  OP_276  R=1410 O="tostring" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0373  OP_152  R=79 O=2 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0374  OP_187  R=0 L=0 W=1151
+--       effect: pc=operandW[pc];
+-- 0375  OP_174  A=function_103 R=15 L=0 W=107
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0376  OP_152  R=680 O=393 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0377  OP_174  A=function_104 R=15 L=0 W=61
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0378  OP_152  R=2029 O=505 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0379  OP_187  R=0 L=0 W=184
+--       effect: pc=operandW[pc];
+-- 0380  OP_187  R=0 L=0 W=999
+--       effect: pc=operandW[pc];
+-- 0381  OP_215  A="FromName" R=1570 O=164 L=14 W=1234
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0382  OP_174  A=function_105 R=15 L=0 W=4
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0383  OP_152  R=926 O=451 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0384  OP_187  R=0 L=0 W=759
+--       effect: pc=operandW[pc];
+-- 0385  OP_152  R=1030 O=328 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0386  OP_174  A=function_106 R=228 L=0 W=45
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0387  OP_152  R=804 O=415 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0388  OP_187  R=0 L=0 W=835
+--       effect: pc=operandW[pc];
+-- 0389  OP_152  R=49 O=7 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0390  OP_174  A=function_107 R=15 L=0 W=173
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0391  OP_152  R=255 O=462 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0392  OP_174  A=function_108 R=15 L=0 W=275
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0393  OP_152  R=789 O=501 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0394  OP_215  A="insert" R=1649 O=91 L=14 W=206
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0395  OP_023  R=14 K=0 L=383 W=14
+--       effect: if B[27]~=B[30]then else B[52]=B[56];end;C=operandW[pc];U=(registers[operandR[pc]]);(registers)[C+1]=U;(registers)[C]=U[operandK[pc]];
+-- 0396  OP_187  R=0 L=0 W=997
+--       effect: pc=operandW[pc];
+-- 0397  OP_174  A=function_109 R=15 L=0 W=332
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0398  OP_152  R=435 O=342 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0399  OP_215  A="readu8" R=644 O=174 L=14 W=1068
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0400  OP_215  A="Folder" R=2006 O=147 L=14 W=1161
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0401  OP_187  R=0 L=0 W=1165
+--       effect: pc=operandW[pc];
+-- 0402  OP_215  A="spawn" R=1665 O=97 L=14 W=1509
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0403  OP_174  A=function_110 R=15 L=0 W=142
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0404  OP_152  R=1098 O=434 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0405  OP_174  A=function_111 R=15 L=0 W=181
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0406  OP_187  R=0 L=0 W=1073
+--       effect: pc=operandW[pc];
+-- 0407  OP_174  A=function_112 R=15 L=0 W=111
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0408  OP_152  R=350 O=347 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0409  OP_174  A=function_113 R=15 L=0 W=105
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0410  OP_152  R=1692 O=523 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0411  OP_215  A="Scale" R=1513 O=106 L=14 W=1862
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0412  OP_187  R=0 L=0 W=661
+--       effect: pc=operandW[pc];
+-- 0413  OP_152  R=2377 O=245 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0414  OP_174  A=function_114 R=15 L=0 W=269
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0415  OP_152  R=1850 O=515 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0416  OP_187  R=0 L=0 W=880
+--       effect: pc=operandW[pc];
+-- 0417  OP_174  A=function_115 R=15 L=0 W=265
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0418  OP_152  R=439 O=506 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0419  OP_174  A=function_116 R=15 L=0 W=261
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0420  OP_187  R=0 L=0 W=1328
+--       effect: pc=operandW[pc];
+-- 0421  OP_276  R=550 O="Path2DControlPoint" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0422  OP_017  R=672 O="new" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 0423  OP_152  R=1064 O=84 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0424  OP_215  A="nparams" R=959 O=70 L=14 W=1741
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0425  OP_215  A="rep" R=1014 O=29 L=14 W=1003
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0426  OP_276  R=2284 O="select" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0427  OP_152  R=1055 O=40 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0428  OP_276  R=2305 O="setfenv" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0429  OP_152  R=1156 O=26 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0430  OP_174  A=function_117 R=15 L=0 W=372
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0431  OP_187  R=0 L=0 W=20
+--       effect: pc=operandW[pc];
+-- 0432  OP_228  R=158 L=200 W=136
+--       effect: registers[operandL[pc]]=(registers[operandW[pc]]/operandO[pc]);
+-- 0433  OP_273  R=256 L=439 W=161
+--       effect: R=registers;T=(operandR[pc]);R=R[T];
+-- 0434  OP_152  R=1635 O=349 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0435  OP_174  A=function_118 R=15 L=0 W=102
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0436  OP_152  R=1653 O=471 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0437  OP_187  R=0 L=0 W=52
+--       effect: pc=operandW[pc];
+-- 0438  OP_174  A=function_119 R=15 L=0 W=1
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0439  OP_152  R=418 O=275 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0440  OP_174  A=function_120 R=15 L=0 W=128
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0441  OP_152  R=1295 O=464 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0442  OP_187  R=0 L=0 W=374
+--       effect: pc=operandW[pc];
+-- 0443  OP_174  A=function_121 R=15 L=0 W=57
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0444  OP_152  R=697 O=453 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0445  OP_215  A="len" R=266 O=98 L=14 W=1748
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0446  OP_215  A="assert" R=1154 O=82 L=14 W=1384
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0447  OP_174  A=function_123 R=15 L=0 W=53
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0448  OP_152  R=2128 O=371 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0449  OP_187  R=0 L=0 W=740
+--       effect: pc=operandW[pc];
+-- 0450  OP_158  R=22 L=127 W=499
+--       effect: if not(operandA[pc]<=registers[operandR[pc]])then pc=operandL[pc];end;
+-- 0451  OP_174  A=function_124 R=15 L=0 W=289
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0452  OP_152  R=1070 O=476 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0453  OP_174  A=function_125 R=15 L=0 W=144
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0454  OP_152  R=2230 O=242 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0455  OP_174  A=function_126 R=15 L=0 W=333
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0456  OP_152  R=391 O=448 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0457  OP_187  R=0 L=0 W=299
+--       effect: pc=operandW[pc];
+-- 0458  OP_187  R=0 L=0 W=136
+--       effect: pc=operandW[pc];
+-- 0459  OP_152  R=1592 O=307 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0460  OP_174  A=function_127 R=15 L=0 W=203
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0461  OP_194  R=71 L=169 W=19
+--       effect: C=registers;
+-- 0462  OP_148  R=196 L=14 W=198
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 0463  OP_119  R=1235 O=234 L=253 W=249
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 0464  OP_281  R=31 L=205 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 0465  OP_174  A=function_134 R=15 L=0 W=293
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0466  OP_152  R=495 O=420 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0467  OP_174  A=function_135 R=15 L=0 W=318
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0468  OP_187  R=0 L=0 W=1186
+--       effect: pc=operandW[pc];
+-- 0469  OP_152  R=2057 O=490 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0470  OP_174  A=function_136 R=15 L=0 W=305
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0471  OP_152  R=589 O=465 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0472  OP_174  A=function_137 R=15 L=0 W=314
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0473  OP_152  R=970 O=339 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0474  OP_187  R=0 L=0 W=983
+--       effect: pc=operandW[pc];
+-- 0475  OP_215  A="PaddingLeft" R=637 O=119 L=14 W=1123
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0476  OP_174  A=function_138 R=15 L=0 W=224
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0477  OP_152  R=2078 O=499 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0478  OP_174  A=function_139 R=15 L=0 W=325
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0479  OP_187  R=0 L=0 W=1176
+--       effect: pc=operandW[pc];
+-- 0480  OP_065  R=11 L=361 W=232
+--       effect: (registers)[operandL[pc]]=registers;
+-- 0481  OP_174  A=function_140 R=15 L=0 W=189
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0482  OP_152  R=1760 O=468 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0483  OP_174  A=function_141 R=15 L=0 W=341
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0484  OP_187  R=0 L=0 W=457
+--       effect: pc=operandW[pc];
+-- 0485  OP_187  R=0 L=0 W=284
+--       effect: pc=operandW[pc];
+-- 0486  OP_174  A=function_142 R=15 L=0 W=202
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0487  OP_152  R=1501 O=413 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0488  OP_215  A="IsServer" R=842 O=144 L=14 W=1814
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0489  OP_187  R=0 L=0 W=396
+--       effect: pc=operandW[pc];
+-- 0490  OP_152  R=184 O=395 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0491  OP_174  A=function_143 R=15 L=0 W=197
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0492  OP_152  R=844 O=256 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0493  OP_174  A=function_144 R=15 L=0 W=252
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0494  OP_187  R=0 L=0 W=1156
+--       effect: pc=operandW[pc];
+-- 0495  OP_174  A=function_145 R=15 L=0 W=89
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0496  OP_152  R=2025 O=351 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0497  OP_215  A=":(%d+)[:\r\n]" R=1707 O=167 L=14 W=2031
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0498  OP_174  A=function_146 R=15 L=0 W=26
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0499  OP_152  R=157 O=366 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0500  OP_174  A=function_147 R=15 L=0 W=58
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0501  OP_152  R=797 O=387 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0502  OP_174  A=function_148 R=15 L=0 W=23
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0503  OP_152  R=2197 O=238 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0504  OP_174  A=function_149 R=15 L=0 W=19
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0505  OP_187  R=0 L=0 W=777
+--       effect: pc=operandW[pc];
+-- 0506  OP_152  R=386 O=337 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0507  OP_174  A=function_150 R=15 L=0 W=215
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0508  OP_194  R=210 L=186 W=107
+--       effect: C=registers;
+-- 0509  OP_148  R=58 L=14 W=242
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 0510  OP_119  R=1236 O=298 L=89 W=103
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 0511  OP_281  R=200 L=73 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 0512  OP_215  A="wait" R=1202 O=59 L=14 W=1709
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0513  OP_174  A=function_151 R=15 L=0 W=329
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0514  OP_152  R=2074 O=273 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0515  OP_174  A=function_152 R=15 L=0 W=273
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0516  OP_152  R=1641 O=443 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0517  OP_187  R=0 L=0 W=46
+--       effect: pc=operandW[pc];
+-- 0518  OP_152  R=122 O=3 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0519  OP_276  R=2279 O="pcall" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0520  OP_152  R=1078 O=44 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0521  OP_215  A="TextButton" R=1488 O=117 L=14 W=1891
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0522  OP_174  A=function_153 R=15 L=0 W=311
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0523  OP_152  R=1642 O=348 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0524  OP_174  A=function_154 R=15 L=0 W=303
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0525  OP_152  R=995 O=418 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0526  OP_187  R=0 L=0 W=1318
+--       effect: pc=operandW[pc];
+-- 0527  OP_215  A="PaddingTop" R=1265 O=116 L=14 W=462
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0528  OP_174  A=function_155 R=15 L=0 W=214
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0529  OP_194  R=177 L=223 W=254
+--       effect: C=registers;
+-- 0530  OP_148  R=228 L=14 W=93
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 0531  OP_119  R=605 O=327 L=47 W=193
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 0532  OP_281  R=77 L=166 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 0533  OP_187  R=0 L=0 W=741
+--       effect: pc=operandW[pc];
+-- 0534  OP_187  R=0 L=0 W=957
+--       effect: pc=operandW[pc];
+-- 0535  OP_276  R=900 O="utf8" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0536  OP_152  R=2155 O=129 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0537  OP_276  R=1384 O="assert" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0538  OP_187  R=0 L=0 W=388
+--       effect: pc=operandW[pc];
+-- 0539  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0540  OP_010  R=22 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0541  OP_028  A=426 R=25 K=399 L=1191 W=1286
+--       effect: registers[operandR[pc]]=operandK[pc]-operandA[pc];
+-- 0542  OP_114  R=238 O=112 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]-operandO[pc];
+-- 0543  OP_124  R=2286 O=166 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 0544  OP_070  R=259 O=-12 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 0545  OP_152  R=431 O=703 L=22 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0546  OP_215  A=702 R=1104 O=907 L=23 W=1525
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0547  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0548  OP_187  R=0 L=0 W=702
+--       effect: pc=operandW[pc];
+-- 0549  OP_152  R=913 O=53 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0550  OP_174  A=function_156 R=15 L=0 W=191
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0551  OP_152  R=168 O=360 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0552  OP_215  A="RunService" R=2347 O=141 L=14 W=2275
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0553  OP_174  A=function_157 R=15 L=0 W=146
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0554  OP_152  R=1566 O=419 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0555  OP_174  A=function_158 R=15 L=0 W=263
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0556  OP_152  R=649 O=233 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0557  OP_174  A=function_159 R=15 L=0 W=258
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0558  OP_187  R=0 L=0 W=922
+--       effect: pc=operandW[pc];
+-- 0559  OP_170  R=0 L=40 W=0
+--       effect: registers[operandL[pc]]=(operandL);
+-- 0560  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0561  OP_215  A=0 R=1197 O=309 L=40 W=4
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0562  OP_215  A=15 R=1197 O=309 L=39 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0563  OP_215  A=1365 R=367 O=627 L=39 W=200
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0564  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0565  OP_187  R=0 L=0 W=1365
+--       effect: pc=operandW[pc];
+-- 0566  OP_152  R=1969 O=299 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0567  OP_215  A="lastlinedefined" R=419 O=71 L=14 W=2123
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0568  OP_215  A="pack" R=562 O=50 L=14 W=414
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0569  OP_187  R=0 L=0 W=724
+--       effect: pc=operandW[pc];
+-- 0570  OP_215  A="number" R=946 O=163 L=14 W=660
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0571  OP_174  A=function_160 R=15 L=0 W=358
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0572  OP_152  R=780 O=483 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0573  OP_215  A="Workspace" R=919 O=153 L=14 W=1383
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0574  OP_174  A=function_161 R=15 L=0 W=170
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0575  OP_152  R=1034 O=473 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0576  OP_174  A=function_162 R=15 L=0 W=149
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0577  OP_152  R=2053 O=519 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0578  OP_215  A="Value" R=1484 O=162 L=14 W=207
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0579  OP_174  A=function_163 R=15 L=0 W=248
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0580  OP_187  R=0 L=0 W=1313
+--       effect: pc=operandW[pc];
+-- 0581  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0582  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0583  OP_215  A=15 R=773 O=1139 L=38 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0584  OP_215  A=1052 R=2126 O=741 L=39 W=815
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0585  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0586  OP_187  R=0 L=0 W=1052
+--       effect: pc=operandW[pc];
+-- 0587  OP_215  A="traceback" R=2257 O=48 L=14 W=1684
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0588  OP_174  A=function_164 R=15 L=0 W=211
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0589  OP_152  R=1904 O=292 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0590  OP_215  A=false R=52 O=9 L=14 W=1961
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0591  OP_174  A=function_165 R=15 L=0 W=294
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0592  OP_152  R=1619 O=220 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0593  OP_174  A=function_167 R=15 L=0 W=286
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0594  OP_187  R=0 L=0 W=1205
+--       effect: pc=operandW[pc];
+-- 0595  OP_215  A="new" R=702 O=56 L=14 W=672
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0596  OP_174  A=function_168 R=15 L=0 W=78
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0597  OP_152  R=1370 O=372 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0598  OP_174  A=function_169 R=15 L=0 W=6
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0599  OP_187  R=0 L=0 W=627
+--       effect: pc=operandW[pc];
+-- 0600  OP_174  A=function_170 R=15 L=0 W=20
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0601  OP_152  R=139 O=452 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0602  OP_174  A=function_171 R=15 L=0 W=127
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0603  OP_152  R=778 O=289 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0604  OP_215  A="UIScale" R=1362 O=121 L=14 W=522
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0605  OP_215  A="ScreenGui" R=1606 O=100 L=14 W=2091
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0606  OP_174  A=function_176 R=15 L=0 W=14
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0607  OP_152  R=346 O=455 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0608  OP_215  A="Clone" R=1248 O=172 L=14 W=1280
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0609  OP_174  A=function_177 R=15 L=0 W=88
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0610  OP_187  R=0 L=0 W=620
+--       effect: pc=operandW[pc];
+-- 0611  OP_152  R=1194 O=210 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0612  OP_174  A=function_178 R=15 L=0 W=356
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0613  OP_152  R=1009 O=503 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0614  OP_215  A="Shuffle" R=1700 O=171 L=14 W=1114
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0615  OP_187  R=0 L=0 W=711
+--       effect: pc=operandW[pc];
+-- 0616  OP_152  R=661 O=340 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0617  OP_174  A=function_179 R=15 L=0 W=117
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0618  OP_152  R=2376 O=485 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0619  OP_215  A="getfenv" R=1399 O=89 L=14 W=1972
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0620  OP_187  R=0 L=0 W=1107
+--       effect: pc=operandW[pc];
+-- 0621  OP_152  R=586 O=534 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0622  OP_174  A=function_180 R=15 L=0 W=51
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0623  OP_152  R=1474 O=304 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0624  OP_215  A="The debug library is required on Luau platforms. Please open a support ticket." R=820 O=46 L=14 W=2225
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0625  OP_215  A="status" R=2336 O=34 L=14 W=948
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0626  OP_187  R=0 L=0 W=993
+--       effect: pc=operandW[pc];
+-- 0627  OP_187  R=0 L=0 W=558
+--       effect: pc=operandW[pc];
+-- 0628  OP_152  R=628 O=250 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0629  OP_174  A=function_181 R=15 L=0 W=96
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0630  OP_152  R=1992 O=204 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0631  OP_215  A="getmetatable" R=170 O=58 L=14 W=204
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0632  OP_174  A=function_182 R=15 L=0 W=34
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0633  OP_187  R=0 L=0 W=1350
+--       effect: pc=operandW[pc];
+-- 0634  OP_174  A=function_183 R=15 L=0 W=151
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0635  OP_152  R=345 O=237 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0636  OP_174  A=function_184 R=15 L=0 W=166
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0637  OP_152  R=2289 O=470 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0638  OP_276  R=927 O="iscclosure" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0639  OP_152  R=2159 O=77 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0640  OP_174  A=function_185 R=15 L=0 W=185
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0641  OP_187  R=0 L=0 W=458
+--       effect: pc=operandW[pc];
+-- 0642  OP_215  A="currentline" R=429 O=67 L=14 W=470
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0643  OP_174  A=function_186 R=15 L=0 W=336
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0644  OP_152  R=921 O=400 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0645  OP_187  R=0 L=0 W=237
+--       effect: pc=operandW[pc];
+-- 0646  OP_152  R=213 O=80 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0647  OP_174  A=function_187 R=15 L=0 W=344
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0648  OP_152  R=1604 O=331 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0649  OP_174  A=function_188 R=15 L=0 W=186
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0650  OP_187  R=0 L=0 W=42
+--       effect: pc=operandW[pc];
+-- 0651  OP_187  R=0 L=0 W=66
+--       effect: pc=operandW[pc];
+-- 0652  OP_195  R=25 K=237 L=345 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 0653  OP_187  R=0 L=0 W=1026
+--       effect: pc=operandW[pc];
+-- 0654  OP_152  R=1853 O=350 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0655  OP_174  A=function_193 R=15 L=0 W=225
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0656  OP_152  R=1531 O=431 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0657  OP_174  A=function_194 R=15 L=0 W=266
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0658  OP_152  R=315 O=433 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0659  OP_174  A=function_195 R=15 L=0 W=147
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0660  OP_152  R=1361 O=278 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0661  OP_187  R=0 L=0 W=569
+--       effect: pc=operandW[pc];
+-- 0662  OP_174  A=function_196 R=15 L=0 W=116
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0663  OP_152  R=400 O=422 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0664  OP_174  A=function_197 R=15 L=0 W=115
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0665  OP_187  R=0 L=0 W=1218
+--       effect: pc=operandW[pc];
+-- 0666  OP_215  A="X" R=105 O=107 L=14 W=1081
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0667  OP_215  A="setmetatable" R=154 O=73 L=14 W=2298
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0668  OP_174  A=function_198 R=15 L=0 W=2
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0669  OP_187  R=0 L=0 W=1198
+--       effect: pc=operandW[pc];
+-- 0670  OP_152  R=2282 O=392 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0671  OP_215  A="b" R=1887 O=189 L=14 W=968
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0672  OP_174  A=function_199 R=15 L=0 W=309
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0673  OP_187  R=0 L=0 W=111
+--       effect: pc=operandW[pc];
+-- 0674  OP_174  A=function_200 R=15 L=0 W=235
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0675  OP_194  R=174 L=231 W=87
+--       effect: C=registers;
+-- 0676  OP_148  R=52 L=14 W=208
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 0677  OP_119  R=1227 O=336 L=172 W=63
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 0678  OP_281  R=61 L=46 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 0679  OP_174  A=function_201 R=15 L=0 W=371
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0680  OP_187  R=0 L=0 W=225
+--       effect: pc=operandW[pc];
+-- 0681  OP_174  A=function_202 R=15 L=0 W=39
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0682  OP_152  R=602 O=333 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0683  OP_215  A="1" R=2112 O=200 L=14 W=1205
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0684  OP_174  A=function_203 R=15 L=0 W=114
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0685  OP_152  R=1582 O=217 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0686  OP_187  R=0 L=0 W=246
+--       effect: pc=operandW[pc];
+-- 0687  OP_174  A=function_204 R=15 L=0 W=368
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0688  OP_152  R=529 O=528 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0689  OP_174  A=function_205 R=15 L=0 W=292
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0690  OP_187  R=0 L=0 W=1080
+--       effect: pc=operandW[pc];
+-- 0691  OP_187  R=0 L=0 W=968
+--       effect: pc=operandW[pc];
+-- 0692  OP_174  A=function_206 R=15 L=0 W=55
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0693  OP_152  R=733 O=484 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0694  OP_215  A="gmatch" R=66 O=8 L=14 W=2098
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0695  OP_187  R=0 L=0 W=1086
+--       effect: pc=operandW[pc];
+-- 0696  OP_152  R=47 O=4 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0697  OP_174  A=function_207 R=15 L=0 W=130
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0698  OP_152  R=816 O=409 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0699  OP_215  A="8" R=1542 O=192 L=14 W=1278
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0700  OP_215  A="typeof" R=1033 O=93 L=14 W=1983
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0701  OP_215  A="writeu32" R=770 O=187 L=14 W=614
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0702  OP_187  R=0 L=0 W=1268
+--       effect: pc=operandW[pc];
+-- 0703  OP_174  A=function_208 R=197 L=0 W=103
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0704  OP_152  R=1363 O=385 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0705  OP_276  R=750 O="math" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0706  OP_152  R=48 O=39 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0707  OP_174  A=function_209 R=15 L=0 W=80
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0708  OP_152  R=611 O=225 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0709  OP_174  A=function_210 R=15 L=0 W=37
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0710  OP_152  R=1084 O=454 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0711  OP_187  R=0 L=0 W=1274
+--       effect: pc=operandW[pc];
+-- 0712  OP_174  A=function_211 R=118 L=0 W=158
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0713  OP_152  R=2179 O=481 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0714  OP_174  A=function_212 R=15 L=0 W=221
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0715  OP_187  R=0 L=0 W=160
+--       effect: pc=operandW[pc];
+-- 0716  OP_152  R=2350 O=316 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0717  OP_215  A="HttpService" R=392 O=148 L=14 W=1806
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0718  OP_215  A="LayoutOrder" R=238 O=112 L=14 W=777
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0719  OP_276  R=2165 O="Instance" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0720  OP_187  R=0 L=0 W=361
+--       effect: pc=operandW[pc];
+-- 0721  OP_152  R=1377 O=355 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0722  OP_215  A="Top" R=1708 O=156 L=14 W=347
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0723  OP_215  A="writeu8" R=952 O=186 L=14 W=222
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0724  OP_187  R=0 L=0 W=1028
+--       effect: pc=operandW[pc];
+-- 0725  OP_174  A=function_213 R=15 L=0 W=355
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0726  OP_152  R=976 O=235 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0727  OP_215  A="Name" R=564 O=134 L=14 W=1111
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0728  OP_187  R=0 L=0 W=914
+--       effect: pc=operandW[pc];
+-- 0729  OP_174  A=function_214 R=15 L=0 W=223
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0730  OP_152  R=2337 O=338 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0731  OP_174  A=function_215 R=15 L=0 W=240
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0732  OP_152  R=1216 O=343 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0733  OP_174  A=function_216 R=15 L=0 W=222
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0734  OP_152  R=1163 O=258 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0735  OP_276  R=1390 O="type" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0736  OP_187  R=0 L=0 W=517
+--       effect: pc=operandW[pc];
+-- 0737  OP_174  A=function_217 R=15 L=0 W=108
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0738  OP_152  R=1571 O=243 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0739  OP_174  A=function_218 R=15 L=0 W=82
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0740  OP_187  R=0 L=0 W=1066
+--       effect: pc=operandW[pc];
+-- 0741  OP_187  R=0 L=0 W=580
+--       effect: pc=operandW[pc];
+-- 0742  OP_215  A="concat" R=1693 O=36 L=14 W=1823
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0743  OP_215  A="9" R=918 O=201 L=14 W=701
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0744  OP_215  A="GetAsync" R=1951 O=149 L=14 W=1463
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0745  OP_187  R=0 L=0 W=416
+--       effect: pc=operandW[pc];
+-- 0746  OP_152  R=781 O=32 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0747  OP_174  A=function_219 R=15 L=0 W=162
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0748  OP_152  R=997 O=353 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0749  OP_174  A=function_220 R=15 L=0 W=363
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0750  OP_152  R=860 O=208 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0751  OP_276  R=1106 O="game" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0752  OP_187  R=0 L=0 W=1041
+--       effect: pc=operandW[pc];
+-- 0753  OP_152  R=2220 O=249 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0754  OP_174  A=function_221 R=15 L=0 W=79
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0755  OP_152  R=1435 O=251 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0756  OP_215  A="=[C]" R=765 O=64 L=14 W=1743
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0757  OP_187  R=0 L=0 W=906
+--       effect: pc=operandW[pc];
+-- 0758  OP_219  R=0 L=976 W=25
+--       effect: if not(registers[operandW[pc]])then else pc=(operandL[pc]);end;
+-- 0759  OP_187  R=0 L=0 W=1234
+--       effect: pc=operandW[pc];
+-- 0760  OP_174  A=function_224 R=15 L=0 W=354
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0761  OP_152  R=2141 O=435 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0762  OP_174  A=function_225 R=15 L=0 W=254
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0763  OP_152  R=1920 O=437 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0764  OP_187  R=0 L=0 W=1033
+--       effect: pc=operandW[pc];
+-- 0765  OP_152  R=1778 O=6 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0766  OP_174  A=function_226 R=15 L=0 W=101
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0767  OP_152  R=1554 O=428 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0768  OP_215  A="PaddingBottom" R=1893 O=118 L=14 W=721
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0769  OP_174  A=function_227 R=15 L=0 W=95
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0770  OP_152  R=1389 O=532 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0771  OP_215  A="create" R=1494 O=31 L=14 W=676
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0772  OP_187  R=0 L=0 W=494
+--       effect: pc=operandW[pc];
+-- 0773  OP_174  A=function_228 R=15 L=0 W=165
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0774  OP_152  R=2223 O=411 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0775  OP_174  A=function_229 R=15 L=0 W=213
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0776  OP_152  R=2356 O=259 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0777  OP_187  R=0 L=0 W=641
+--       effect: pc=operandW[pc];
+-- 0778  OP_152  R=1716 O=535 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0779  OP_174  A=function_230 R=15 L=0 W=98
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0780  OP_152  R=1507 O=488 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0781  OP_174  A=function_231 R=15 L=0 W=42
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0782  OP_187  R=0 L=0 W=615
+--       effect: pc=operandW[pc];
+-- 0783  OP_215  A="hkizNN" R=693 O=181 L=14 W=1188
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0784  OP_174  A=function_232 R=15 L=0 W=63
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0785  OP_152  R=2174 O=308 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0786  OP_187  R=0 L=0 W=437
+--       effect: pc=operandW[pc];
+-- 0787  OP_248  R=159 L=381 W=250
+--       effect: if B[2]~=B[7]then(registers)[operandW[pc]]=registers[operandL[pc]]~=registers[operandR[pc]];end;
+-- 0788  OP_187  R=0 L=0 W=1113
+--       effect: pc=operandW[pc];
+-- 0789  OP_174  A=function_233 R=15 L=0 W=271
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0790  OP_152  R=434 O=404 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0791  OP_215  A="TextLabel" R=1500 O=109 L=14 W=1397
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0792  OP_174  A=function_234 R=15 L=0 W=188
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0793  OP_152  R=2083 O=408 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0794  OP_174  A=function_235 R=15 L=0 W=131
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0795  OP_152  R=553 O=514 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0796  OP_174  A=function_237 R=15 L=0 W=373
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0797  OP_152  R=925 O=357 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0798  OP_215  A="Back" R=2130 O=158 L=14 W=1204
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0799  OP_174  A=function_238 R=15 L=0 W=176
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0800  OP_152  R=826 O=440 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0801  OP_215  A="namewhat" R=1308 O=60 L=14 W=1354
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0802  OP_174  A=function_239 R=15 L=0 W=276
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0803  OP_152  R=822 O=429 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0804  OP_174  A=function_240 R=15 L=0 W=179
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0805  OP_152  R=1934 O=423 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0806  OP_276  R=258 O="UDim2" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0807  OP_187  R=0 L=0 W=79
+--       effect: pc=operandW[pc];
+-- 0808  OP_174  A=function_241 R=15 L=0 W=299
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0809  OP_152  R=378 O=358 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0810  OP_152  R=31 O=1 L=133 W=0
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0811  OP_174  A=function_242 R=15 L=0 W=268
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0812  OP_152  R=999 O=276 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0813  OP_174  A=function_243 R=15 L=0 W=204
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0814  OP_152  R=1928 O=247 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0815  OP_215  A="GetChildren" R=1190 O=152 L=14 W=1776
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0816  OP_174  A=function_244 R=15 L=0 W=264
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0817  OP_152  R=1523 O=507 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0818  OP_187  R=0 L=0 W=897
+--       effect: pc=operandW[pc];
+-- 0819  OP_174  A=function_245 R=15 L=0 W=232
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0820  OP_152  R=1430 O=525 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0821  OP_174  A=function_246 R=15 L=0 W=343
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0822  OP_152  R=1975 O=477 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0823  OP_174  A=function_247 R=15 L=0 W=362
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0824  OP_152  R=802 O=318 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0825  OP_174  A=function_248 R=15 L=0 W=194
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0826  OP_152  R=1799 O=230 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0827  OP_174  A=function_249 R=15 L=0 W=323
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0828  OP_187  R=0 L=0 W=565
+--       effect: pc=operandW[pc];
+-- 0829  OP_152  R=234 O=218 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0830  OP_174  A=function_250 R=15 L=0 W=141
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0831  OP_152  R=449 O=386 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0832  OP_215  A="4" R=248 O=195 L=14 W=1712
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0833  OP_215  A="c" R=665 O=193 L=14 W=516
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0834  OP_174  A=function_251 R=15 L=0 W=174
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0835  OP_187  R=0 L=0 W=1227
+--       effect: pc=operandW[pc];
+-- 0836  OP_215  A="PaddingRight" R=471 O=120 L=14 W=461
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0837  OP_276  R=1143 O="rawget" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0838  OP_152  R=1179 O=42 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0839  OP_276  R=1651 O="loadstring" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0840  OP_187  R=0 L=0 W=1103
+--       effect: pc=operandW[pc];
+-- 0841  OP_255  R=275 L=97 W=55
+--       effect: C=(registers);U=(operandW[pc]);c=registers;
+-- 0842  OP_097  R=241 L=414 W=163
+--       effect: if B[57]~=B[39]then C=(J[operandW[pc]]);end;registers[operandL[pc]]=(C[1][C[3]]);
+-- 0843  OP_215  A="\ucc95\ubb99\ub016\uc1c4\uc852\ubed7\uae1d\ucf27" R=1982 O=128 L=14 W=1170
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0844  OP_174  A=function_252 R=15 L=0 W=337
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0845  OP_152  R=2002 O=219 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0846  OP_174  A=function_253 R=15 L=0 W=321
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0847  OP_152  R=625 O=450 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0848  OP_174  A=function_254 R=15 L=0 W=182
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0849  OP_187  R=0 L=0 W=489
+--       effect: pc=operandW[pc];
+-- 0850  OP_152  R=1187 O=382 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0851  OP_174  A=function_255 R=15 L=0 W=47
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0852  OP_152  R=1723 O=246 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0853  OP_174  A=function_256 R=15 L=0 W=25
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0854  OP_152  R=1996 O=294 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0855  OP_174  A=function_257 R=15 L=0 W=124
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0856  OP_152  R=443 O=293 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0857  OP_187  R=0 L=0 W=250
+--       effect: pc=operandW[pc];
+-- 0858  OP_152  R=1436 O=320 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0859  OP_174  A=function_258 R=15 L=0 W=72
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0860  OP_152  R=2254 O=533 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0861  OP_187  R=0 L=0 W=406
+--       effect: pc=operandW[pc];
+-- 0862  OP_174  A=function_259 R=15 L=0 W=153
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0863  OP_152  R=884 O=362 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0864  OP_174  A=function_260 R=15 L=0 W=284
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0865  OP_187  R=0 L=0 W=1223
+--       effect: pc=operandW[pc];
+-- 0866  OP_152  R=1292 O=310 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0867  OP_215  A="e" R=1528 O=196 L=14 W=2203
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0868  OP_174  A=function_261 R=15 L=0 W=36
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0869  OP_152  R=1334 O=498 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0870  OP_174  A=function_262 R=15 L=0 W=10
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0871  OP_187  R=0 L=0 W=752
+--       effect: pc=operandW[pc];
+-- 0872  OP_152  R=398 O=302 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0873  OP_276  R=900 O="utf8" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0874  OP_017  R=202 O="nfdnormalize" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 0875  OP_187  R=0 L=0 W=963
+--       effect: pc=operandW[pc];
+-- 0876  OP_152  R=895 O=496 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0877  OP_215  A="running" R=1465 O=23 L=14 W=817
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0878  OP_174  A=function_263 R=15 L=0 W=255
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0879  OP_187  R=0 L=0 W=241
+--       effect: pc=operandW[pc];
+-- 0880  OP_117  R=42 L=157 W=97
+--       effect: R=(operandO[pc]);c=c[R];
+-- 0881  OP_215  A="MaxSize" R=2331 O=122 L=14 W=1933
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0882  OP_174  A=function_264 R=15 L=0 W=136
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0883  OP_152  R=1591 O=394 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0884  OP_187  R=0 L=0 W=861
+--       effect: pc=operandW[pc];
+-- 0885  OP_174  A=function_265 R=15 L=0 W=353
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0886  OP_152  R=1498 O=300 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0887  OP_215  A="a" R=1409 O=194 L=14 W=387
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0888  OP_276  R=2298 O="setmetatable" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0889  OP_152  R=748 O=51 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0890  OP_215  A="match" R=280 O=13 L=14 W=981
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0891  OP_187  R=0 L=0 W=728
+--       effect: pc=operandW[pc];
+-- 0892  OP_174  A=function_266 R=15 L=0 W=70
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0893  OP_152  R=1392 O=430 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0894  OP_174  A=function_267 R=15 L=0 W=97
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0895  OP_152  R=1487 O=478 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0896  OP_174  A=function_268 R=15 L=0 W=12
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0897  OP_187  R=0 L=0 W=104
+--       effect: pc=operandW[pc];
+-- 0898  OP_174  A=function_269 R=15 L=0 W=277
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0899  OP_152  R=319 O=323 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0900  OP_174  A=function_270 R=15 L=0 W=183
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0901  OP_152  R=306 O=241 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0902  OP_174  A=function_271 R=15 L=0 W=374
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0903  OP_152  R=1117 O=231 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0904  OP_215  A="NextUnitVector" R=1863 O=169 L=14 W=1781
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0905  OP_276  R=747 O="unpack" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0906  OP_187  R=0 L=0 W=978
+--       effect: pc=operandW[pc];
+-- 0907  OP_187  R=0 L=0 W=538
+--       effect: pc=operandW[pc];
+-- 0908  OP_174  A=function_272 R=15 L=0 W=54
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0909  OP_152  R=1864 O=389 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0910  OP_174  A=function_273 R=15 L=0 W=74
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0911  OP_152  R=1714 O=377 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0912  OP_215  A="Frame" R=1102 O=101 L=14 W=536
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0913  OP_174  A=function_274 R=15 L=0 W=28
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0914  OP_187  R=0 L=0 W=690
+--       effect: pc=operandW[pc];
+-- 0915  OP_174  A=function_275 R=15 L=0 W=281
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0916  OP_152  R=2192 O=425 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0917  OP_215  A="unpack" R=328 O=35 L=14 W=747
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0918  OP_187  R=0 L=0 W=1322
+--       effect: pc=operandW[pc];
+-- 0919  OP_284  R=25 L=6 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 0920  OP_195  R=26 K=">b< i3<H>J> " L=1000 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 0921  OP_182  R=25 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 0922  OP_187  R=0 L=0 W=757
+--       effect: pc=operandW[pc];
+-- 0923  OP_152  R=1086 O=531 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0924  OP_174  A=function_276 R=15 L=0 W=348
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0925  OP_152  R=341 O=487 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0926  OP_215  A="d" R=1835 O=202 L=14 W=953
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0927  OP_215  A="NormalId" R=1048 O=159 L=14 W=1534
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0928  OP_276  R=1950 O="islclosure" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0929  OP_152  R=949 O=83 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0930  OP_174  A=function_277 R=15 L=0 W=304
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0931  OP_152  R=1035 O=502 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0932  OP_174  A=function_278 R=15 L=0 W=236
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0933  OP_187  R=0 L=0 W=669
+--       effect: pc=operandW[pc];
+-- 0934  OP_276  R=900 O="utf8" L=206 W=103
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0935  OP_194  R=1 L=174 W=148
+--       effect: C=registers;
+-- 0936  OP_077  R=243 L=92 W=15
+--       effect: U=operandW[pc];if B[28]==B[19]then else c=registers;end;
+-- 0937  OP_060  R=31 L=15 W=85
+--       effect: R=(operandL[pc]);c=(c[R]);
+-- 0938  OP_117  R=2113 O="nfcnormalize" L=12 W=57
+--       effect: R=(operandO[pc]);c=c[R];
+-- 0939  OP_109  R=238 L=177 W=250
+--       effect: C[U]=(c);
+-- 0940  OP_152  R=845 O=130 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0941  OP_174  A=function_279 R=15 L=0 W=167
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0942  OP_152  R=1413 O=215 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0943  OP_276  R=1981 O="xpcall" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0944  OP_187  R=0 L=0 W=977
+--       effect: pc=operandW[pc];
+-- 0945  OP_152  R=1320 O=375 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0946  OP_174  A=function_280 R=15 L=0 W=155
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0947  OP_152  R=758 O=403 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0948  OP_174  A=function_281 R=15 L=0 W=228
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0949  OP_187  R=0 L=0 W=653
+--       effect: pc=operandW[pc];
+-- 0950  OP_215  A="type" R=2041 O=87 L=14 W=1390
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0951  OP_174  A=function_282 R=15 L=0 W=262
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0952  OP_152  R=1137 O=211 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0953  OP_215  A="cancel" R=875 O=24 L=14 W=1678
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0954  OP_215  A="DataModel" R=1925 O=125 L=14 W=977
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0955  OP_215  A="rawset" R=191 O=76 L=14 W=2381
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0956  OP_174  A=function_283 R=15 L=0 W=175
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0957  OP_187  R=0 L=0 W=89
+--       effect: pc=operandW[pc];
+-- 0958  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 0959  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0960  OP_215  A=15 R=1610 O=386 L=38 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0961  OP_215  A=307 R=2100 O=534 L=39 W=1841
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0962  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 0963  OP_187  R=0 L=0 W=307
+--       effect: pc=operandW[pc];
+-- 0964  OP_152  R=2013 O=127 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0965  OP_276  R=1138 O="bit32" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0966  OP_017  R=873 O="rshift" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 0967  OP_152  R=923 O=178 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0968  OP_187  R=0 L=0 W=313
+--       effect: pc=operandW[pc];
+-- 0969  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 0970  OP_102  R=0 L=18 W=0
+--       effect: registers[operandL[pc]]=opcodeStream;
+-- 0971  OP_284  R=25 L=13 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 0972  OP_284  R=26 L=11 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 0973  OP_182  R=25 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 0974  OP_118  R=25 K=509 L=1302 W=25
+--       effect: registers[operandR[pc]]=(operandK[pc]>registers[operandW[pc]]);
+-- 0975  OP_000  R=1026 L=0 W=25
+--       effect: if not(not registers[operandW[pc]])then else pc=operandR[pc];end;
+-- 0976  OP_187  R=0 L=0 W=651
+--       effect: pc=operandW[pc];
+-- 0977  OP_187  R=0 L=0 W=338
+--       effect: pc=operandW[pc];
+-- 0978  OP_187  R=0 L=0 W=1020
+--       effect: pc=operandW[pc];
+-- 0979  OP_152  R=1031 O=203 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0980  OP_174  A=function_284 R=15 L=0 W=239
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0981  OP_152  R=1560 O=359 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0982  OP_276  R=1138 O="bit32" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 0983  OP_187  R=0 L=0 W=1015
+--       effect: pc=operandW[pc];
+-- 0984  OP_174  A=function_285 R=15 L=0 W=154
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0985  OP_152  R=1496 O=459 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0986  OP_215  A="resume" R=69 O=30 L=14 W=1313
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 0987  OP_187  R=0 L=0 W=633
+--       effect: pc=operandW[pc];
+-- 0988  OP_152  R=285 O=524 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0989  OP_174  A=function_286 R=15 L=0 W=71
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0990  OP_152  R=2266 O=489 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0991  OP_174  A=function_287 R=15 L=0 W=30
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0992  OP_152  R=1419 O=383 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0993  OP_187  R=0 L=0 W=691
+--       effect: pc=operandW[pc];
+-- 0994  OP_174  A=function_288 R=15 L=0 W=7
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0995  OP_152  R=1185 O=417 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 0996  OP_174  A=function_289 R=15 L=0 W=18
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 0997  OP_187  R=0 L=0 W=857
+--       effect: pc=operandW[pc];
+-- 0998  OP_144  R=14 L=0 W=0
+--       effect: see ../luarmor_superflow_handlers/opcode_144.luau (246 chars)
+-- 0999  OP_187  R=0 L=0 W=1209
+--       effect: pc=operandW[pc];
+-- 1000  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1001  OP_010  R=22 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 1002  OP_284  R=25 L=18 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1003  OP_284  R=26 L=8 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1004  OP_195  R=27 K=">i8" L=84 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1005  OP_195  R=28 K="\u0000\u0000\u0000\u0000\u0000\u0000\u0001\ufffd" L=223 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1006  OP_279  R=0 L=0 W=26
+--       effect: C=operandW[pc];(registers)[C]=registers[C](registers[C+1],registers[C+2]);p=C;
+-- 1007  OP_199  R=869 O=456 L=26 W=26
+--       effect: (registers)[operandL[pc]]=(operandO[pc]-registers[operandW[pc]]);
+-- 1008  OP_195  R=27 K=26 L=1156 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1009  OP_279  R=0 L=0 W=25
+--       effect: C=operandW[pc];(registers)[C]=registers[C](registers[C+1],registers[C+2]);p=C;
+-- 1010  OP_124  R=2313 O=-2348782424 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 1011  OP_070  R=1279 O=-27801 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 1012  OP_152  R=2104 O=220 L=22 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1013  OP_215  A=213 R=630 O=380 L=23 W=489
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1014  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 1015  OP_187  R=0 L=0 W=213
+--       effect: pc=operandW[pc];
+-- 1016  OP_017  R=2280 O="band" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 1017  OP_152  R=1259 O=175 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1018  OP_174  A=function_291 R=15 L=0 W=145
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1019  OP_152  R=172 O=406 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1020  OP_187  R=0 L=0 W=586
+--       effect: pc=operandW[pc];
+-- 1021  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 1022  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1023  OP_215  A=15 R=1668 O=169 L=38 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1024  OP_215  A=1252 R=651 O=978 L=39 W=768
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1025  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 1026  OP_187  R=0 L=0 W=1252
+--       effect: pc=operandW[pc];
+-- 1027  OP_219  R=0 L=8 W=25
+--       effect: if not(registers[operandW[pc]])then else pc=(operandL[pc]);end;
+-- 1028  OP_187  R=0 L=0 W=1099
+--       effect: pc=operandW[pc];
+-- 1029  OP_174  A=function_292 R=15 L=0 W=302
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1030  OP_152  R=866 O=376 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1031  OP_174  A=function_293 R=15 L=0 W=308
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1032  OP_152  R=1986 O=405 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1033  OP_187  R=0 L=0 W=1085
+--       effect: pc=operandW[pc];
+-- 1034  OP_215  A=true R=92 O=10 L=14 W=549
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1035  OP_215  A="Parent" R=15 O=105 L=14 W=502
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1036  OP_174  A=function_294 R=15 L=0 W=241
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1037  OP_187  R=0 L=0 W=720
+--       effect: pc=operandW[pc];
+-- 1038  OP_174  A=function_295 R=15 L=0 W=120
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1039  OP_152  R=1317 O=527 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1040  OP_215  A="UISizeConstraint" R=233 O=114 L=14 W=861
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1041  OP_187  R=0 L=0 W=907
+--       effect: pc=operandW[pc];
+-- 1042  OP_152  R=2116 O=52 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1043  OP_215  A="" R=494 O=61 L=14 W=2248
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1044  OP_174  A=function_296 R=15 L=0 W=365
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1045  OP_152  R=2297 O=321 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1046  OP_187  R=0 L=0 W=842
+--       effect: pc=operandW[pc];
+-- 1047  OP_152  R=1529 O=370 L=14 W=89
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1048  OP_215  A="NextInteger" R=1283 O=170 L=14 W=1267
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1049  OP_215  A="Disconnect" R=1518 O=139 L=14 W=1859
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1050  OP_215  A="Y" R=42 O=108 L=14 W=687
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1051  OP_174  A=function_297 R=15 L=0 W=143
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1052  OP_187  R=0 L=0 W=1344
+--       effect: pc=operandW[pc];
+-- 1053  OP_276  R=747 O="unpack" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1054  OP_152  R=1244 O=27 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1055  OP_215  A="Connect" R=1737 O=137 L=14 W=2139
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1056  OP_187  R=0 L=0 W=1138
+--       effect: pc=operandW[pc];
+-- 1057  OP_152  R=317 O=20 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1058  OP_174  A=function_298 R=15 L=0 W=50
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1059  OP_152  R=716 O=285 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1060  OP_174  A=function_299 R=15 L=0 W=16
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1061  OP_187  R=0 L=0 W=849
+--       effect: pc=operandW[pc];
+-- 1062  OP_152  R=563 O=381 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1063  OP_215  A="C" R=931 O=66 L=14 W=713
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1064  OP_215  A="fromstring" R=958 O=188 L=14 W=941
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1065  OP_174  A=function_300 R=15 L=0 W=156
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1066  OP_187  R=0 L=0 W=875
+--       effect: pc=operandW[pc];
+-- 1067  OP_152  R=1626 O=449 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1068  OP_174  A=function_301 R=15 L=0 W=69
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1069  OP_152  R=1725 O=361 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1070  OP_276  R=2381 O="rawset" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1071  OP_152  R=1096 O=16 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1072  OP_215  A="AnchorPoint" R=597 O=111 L=14 W=1730
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1073  OP_187  R=0 L=0 W=1299
+--       effect: pc=operandW[pc];
+-- 1074  OP_152  R=1974 O=268 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1075  OP_174  A=function_302 R=15 L=0 W=291
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1076  OP_152  R=371 O=274 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1077  OP_174  A=function_306 R=15 L=0 W=346
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1078  OP_152  R=2374 O=283 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1079  OP_276  R=1138 O="bit32" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1080  OP_187  R=0 L=0 W=193
+--       effect: pc=operandW[pc];
+-- 1081  OP_152  R=1338 O=254 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1082  OP_174  A=function_307 R=76 L=0 W=278
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1083  OP_152  R=1191 O=399 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1084  OP_174  A=function_308 R=15 L=0 W=196
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1085  OP_187  R=0 L=0 W=828
+--       effect: pc=operandW[pc];
+-- 1086  OP_187  R=0 L=0 W=1
+--       effect: pc=operandW[pc];
+-- 1087  OP_215  A="what" R=1818 O=65 L=14 W=2366
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1088  OP_276  R=1902 O="UDim" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1089  OP_017  R=672 O="new" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 1090  OP_152  R=591 O=99 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1091  OP_174  A=function_309 R=15 L=0 W=9
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1092  OP_187  R=0 L=0 W=232
+--       effect: pc=operandW[pc];
+-- 1093  OP_187  R=0 L=0 W=1093
+--       effect: pc=operandW[pc];
+-- 1094  OP_193  R=39 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1095  OP_010  R=38 L=0 W=0
+--       effect: (registers)[operandR[pc]]=operandR;
+-- 1096  OP_215  A=15 R=1418 O=712 L=38 W=58
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1097  OP_215  A=177 R=1980 O=1093 L=39 W=412
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1098  OP_088  R=33 L=0 W=40
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 1099  OP_187  R=0 L=0 W=177
+--       effect: pc=operandW[pc];
+-- 1100  OP_284  R=25 L=17 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1101  OP_195  R=26 K="\ufffdu" L=1689 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1102  OP_182  R=25 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 1103  OP_187  R=0 L=0 W=8
+--       effect: pc=operandW[pc];
+-- 1104  OP_152  R=88 O=11 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1105  OP_215  A="setfenv" R=1289 O=90 L=14 W=2305
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1106  OP_215  A="Size" R=1059 O=103 L=14 W=662
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1107  OP_187  R=0 L=0 W=1214
+--       effect: pc=operandW[pc];
+-- 1108  OP_174  A=function_310 R=15 L=0 W=106
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1109  OP_152  R=2107 O=380 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1110  OP_174  A=function_311 R=15 L=0 W=100
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1111  OP_152  R=2327 O=379 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1112  OP_174  A=function_312 R=15 L=0 W=113
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1113  OP_187  R=0 L=0 W=142
+--       effect: pc=operandW[pc];
+-- 1114  OP_102  R=0 L=18 W=0
+--       effect: registers[operandL[pc]]=opcodeStream;
+-- 1115  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1116  OP_284  R=25 L=16 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1117  OP_195  R=26 K=126 L=932 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1118  OP_195  R=27 K=18 L=488 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1119  OP_279  R=0 L=0 W=25
+--       effect: C=operandW[pc];(registers)[C]=registers[C](registers[C+1],registers[C+2]);p=C;
+-- 1120  OP_284  R=26 L=8 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1121  OP_195  R=27 K=">i8" L=84 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1122  OP_195  R=28 K="\u0000\u0000\u0000\u0000\u0000\u0000\u0000\ufffd" L=764 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1123  OP_279  R=0 L=0 W=26
+--       effect: C=operandW[pc];(registers)[C]=registers[C](registers[C+1],registers[C+2]);p=C;
+-- 1124  OP_208  R=26 L=25 W=25
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]]-registers[operandR[pc]]);
+-- 1125  OP_124  R=2148 O=-2043729 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 1126  OP_070  R=2311 O=-20224 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 1127  OP_152  R=732 O=1184 L=18 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1128  OP_215  A=480 R=1158 O=788 L=23 W=973
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1129  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 1130  OP_187  R=0 L=0 W=480
+--       effect: pc=operandW[pc];
+-- 1131  OP_152  R=805 O=469 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1132  OP_276  R=1138 O="bit32" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1133  OP_017  R=1777 O="lshift" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 1134  OP_187  R=0 L=0 W=1134
+--       effect: pc=operandW[pc];
+-- 1135  OP_152  R=2357 O=179 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1136  OP_001  A=function_313 R=15 L=0 W=119
+--       effect: see ../luarmor_superflow_handlers/opcode_001.luau (2830 chars)
+-- 1137  OP_152  R=1812 O=207 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1138  OP_187  R=0 L=0 W=650
+--       effect: pc=operandW[pc];
+-- 1139  OP_174  A=function_314 R=58 L=0 W=73
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1140  OP_152  R=2256 O=223 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1141  OP_276  R=1972 O="getfenv" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1142  OP_187  R=0 L=0 W=626
+--       effect: pc=operandW[pc];
+-- 1143  OP_152  R=2276 O=491 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1144  OP_215  A="Instance" R=1916 O=131 L=14 W=2165
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1145  OP_174  A=function_316 R=15 L=0 W=118
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1146  OP_152  R=1564 O=277 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1147  OP_187  R=0 L=0 W=156
+--       effect: pc=operandW[pc];
+-- 1148  OP_152  R=1536 O=344 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1149  OP_174  A=function_317 R=15 L=0 W=342
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1150  OP_152  R=2292 O=526 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1151  OP_187  R=0 L=0 W=15
+--       effect: pc=operandW[pc];
+-- 1152  OP_174  A=function_318 R=15 L=0 W=152
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1153  OP_152  R=240 O=356 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1154  OP_215  A="pcall" R=2382 O=85 L=14 W=2279
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1155  OP_174  A=function_319 R=15 L=0 W=245
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1156  OP_187  R=0 L=0 W=871
+--       effect: pc=operandW[pc];
+-- 1157  OP_152  R=633 O=390 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1158  OP_174  A=function_320 R=15 L=0 W=209
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1159  OP_152  R=2180 O=482 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1160  OP_215  A="Random" R=776 O=168 L=14 W=1717
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1161  OP_174  A=function_321 R=15 L=0 W=328
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1162  OP_152  R=1609 O=396 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1163  OP_174  A=function_322 R=15 L=0 W=212
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1164  OP_152  R=2087 O=319 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1165  OP_187  R=0 L=0 W=366
+--       effect: pc=operandW[pc];
+-- 1166  OP_174  A=function_325 R=15 L=0 W=253
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1167  OP_152  R=2145 O=326 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1168  OP_174  A=function_326 R=15 L=0 W=340
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1169  OP_187  R=0 L=0 W=468
+--       effect: pc=operandW[pc];
+-- 1170  OP_152  R=2195 O=445 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1171  OP_174  A=function_328 R=15 L=0 W=199
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1172  OP_194  R=94 L=131 W=227
+--       effect: C=registers;
+-- 1173  OP_148  R=172 L=14 W=41
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 1174  OP_119  R=1608 O=214 L=179 W=49
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 1175  OP_281  R=30 L=15 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 1176  OP_187  R=0 L=0 W=93
+--       effect: pc=operandW[pc];
+-- 1177  OP_152  R=577 O=306 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1178  OP_174  A=function_329 R=15 L=0 W=198
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1179  OP_152  R=2206 O=303 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1180  OP_215  A="Rotation" R=766 O=110 L=14 W=1133
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1181  OP_174  A=function_330 R=15 L=0 W=207
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1182  OP_187  R=0 L=0 W=1169
+--       effect: pc=operandW[pc];
+-- 1183  OP_152  R=1647 O=378 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1184  OP_171  A="byte" R=210 O=21 L=14 W=569
+--       effect: c%=R;(C)[U]=(c);
+-- 1185  OP_174  A=function_331 R=15 L=0 W=300
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1186  OP_187  R=138 L=0 W=328
+--       effect: pc=operandW[pc];
+-- 1187  OP_152  R=1129 O=227 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1188  OP_174  A=function_332 R=15 L=0 W=164
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1189  OP_194  R=56 L=129 W=144
+--       effect: C=registers;
+-- 1190  OP_148  R=235 L=14 W=244
+--       effect: if B[4]==B[30]then else U=operandL[pc];end;
+-- 1191  OP_119  R=906 O=309 L=23 W=88
+--       effect: C=C[U];U=(operandO[pc]);c=(registers);
+-- 1192  OP_281  R=13 L=250 W=15
+--       effect: local r=(119);if r==119 then R=(operandW[pc]);c=c[R];end;(C)[U]=(c);
+-- 1193  OP_276  R=2236 O="Vector3" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1194  OP_187  R=0 L=0 W=745
+--       effect: pc=operandW[pc];
+-- 1195  OP_174  A=function_333 R=15 L=0 W=92
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1196  OP_152  R=627 O=391 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1197  OP_276  R=640 O="string" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1198  OP_187  R=0 L=0 W=764
+--       effect: pc=operandW[pc];
+-- 1199  OP_152  R=610 O=232 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1200  OP_174  A=function_334 R=15 L=0 W=40
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1201  OP_152  R=2201 O=368 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1202  OP_215  A="__index" R=1733 O=180 L=14 W=813
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1203  OP_174  A=function_335 R=15 L=0 W=43
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1204  OP_152  R=1971 O=341 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1205  OP_187  R=0 L=0 W=380
+--       effect: pc=operandW[pc];
+-- 1206  OP_152  R=1699 O=213 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1207  OP_215  A="source" R=159 O=63 L=14 W=534
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1208  OP_174  A=function_336 R=15 L=0 W=357
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1209  OP_187  R=0 L=0 W=1061
+--       effect: pc=operandW[pc];
+-- 1210  OP_198  R=0 L=0 W=0
+--       effect: Y,q=B[60](...);
+-- 1211  OP_005  R=0 L=2 W=13
+--       effect: C=(operandL[pc]);U=0;for M=C,C+(operandW[pc]-1)do registers[M]=(q[f+U]);U+=1;end;
+-- 1212  OP_103  R=0 L=0 W=14
+--       effect: (registers)[operandW[pc]]={};
+-- 1213  OP_174  A=function_337 R=15 L=0 W=76
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1214  OP_187  R=0 L=0 W=865
+--       effect: pc=operandW[pc];
+-- 1215  OP_174  A=function_338 R=15 L=0 W=3
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1216  OP_152  R=1970 O=322 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1217  OP_215  A="short_src" R=2060 O=68 L=14 W=1696
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1218  OP_187  R=0 L=0 W=116
+--       effect: pc=operandW[pc];
+-- 1219  OP_152  R=1159 O=265 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1220  OP_215  A="Enums" R=2044 O=155 L=14 W=2346
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1221  OP_174  A=function_339 R=15 L=0 W=52
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1222  OP_152  R=1346 O=416 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1223  OP_187  R=0 L=0 W=146
+--       effect: pc=operandW[pc];
+-- 1224  OP_152  R=2023 O=398 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1225  OP_215  A="Position" R=2295 O=102 L=14 W=322
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1226  OP_174  A=function_340 R=15 L=0 W=283
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1227  OP_187  R=0 L=0 W=1147
+--       effect: pc=operandW[pc];
+-- 1228  OP_152  R=302 O=229 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1229  OP_215  A="table" R=254 O=57 L=14 W=2245
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1230  OP_215  A="Connected" R=1938 O=138 L=14 W=2359
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1231  OP_174  A=function_341 R=15 L=0 W=313
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1232  OP_152  R=555 O=500 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1233  OP_276  R=1717 O="Random" L=0 W=118
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1234  OP_187  R=0 L=0 W=645
+--       effect: pc=operandW[pc];
+-- 1235  OP_194  R=70 L=124 W=78
+--       effect: C=registers;
+-- 1236  OP_033  R=25 L=63 W=12
+--       effect: U=(operandR[pc]);
+-- 1237  OP_025  R=131 K=361 L=1725 W=10
+--       effect: c=(operandK[pc]);(C)[U]=c;
+-- 1238  OP_187  R=0 L=0 W=976
+--       effect: pc=operandW[pc];
+-- 1239  OP_215  A="isyieldable" R=1230 O=95 L=14 W=2038
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1240  OP_174  A=function_342 R=15 L=0 W=247
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1241  OP_152  R=201 O=272 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1242  OP_187  R=0 L=0 W=401
+--       effect: pc=operandW[pc];
+-- 1243  OP_276  R=2340 O="CFrame" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1244  OP_152  R=1985 O=185 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1245  OP_174  A=function_343 R=230 L=0 W=157
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1246  OP_152  R=2216 O=222 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1247  OP_276  R=204 O="getmetatable" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1248  OP_152  R=488 O=18 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1249  OP_174  A=function_344 R=15 L=0 W=249
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1250  OP_152  R=1803 O=226 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1251  OP_187  R=0 L=0 W=787
+--       effect: pc=operandW[pc];
+-- 1252  OP_090  R=486 L=199 W=1
+--       effect: (registers)[operandL[pc]]=(operandA[pc]<registers[operandR[pc]]);
+-- 1253  OP_152  R=332 O=75 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1254  OP_174  A=function_345 R=15 L=0 W=231
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1255  OP_152  R=343 O=424 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1256  OP_187  R=0 L=0 W=168
+--       effect: pc=operandW[pc];
+-- 1257  OP_276  R=1138 O="bit32" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1258  OP_017  R=864 O="countrz" L=15 W=15
+--       effect: registers[operandW[pc]]=(registers[operandL[pc]][operandO[pc]]);
+-- 1259  OP_152  R=1422 O=177 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1260  OP_187  R=0 L=0 W=450
+--       effect: pc=operandW[pc];
+-- 1261  OP_174  A=function_346 R=15 L=0 W=171
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1262  OP_152  R=896 O=266 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1263  OP_174  A=function_347 R=15 L=0 W=359
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1264  OP_187  R=0 L=0 W=1264
+--       effect: pc=operandW[pc];
+-- 1265  OP_152  R=1768 O=373 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1266  OP_174  A=function_348 R=15 L=0 W=160
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1267  OP_152  R=2291 O=240 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1268  OP_187  R=0 L=0 W=484
+--       effect: pc=operandW[pc];
+-- 1269  OP_215  A="select" R=812 O=79 L=14 W=2284
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1270  OP_215  A="close" R=1535 O=38 L=14 W=1866
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1271  OP_215  A="rawget" R=1877 O=78 L=14 W=1143
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1272  OP_215  A="The metatable is locked" R=1789 O=140 L=14 W=2115
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1273  OP_174  A=function_349 R=15 L=0 W=326
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1274  OP_187  R=0 L=0 W=505
+--       effect: pc=operandW[pc];
+-- 1275  OP_174  A=function_350 R=15 L=0 W=59
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1276  OP_152  R=1874 O=438 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1277  OP_174  A=function_351 R=15 L=0 W=67
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1278  OP_187  R=0 L=0 W=350
+--       effect: pc=operandW[pc];
+-- 1279  OP_170  R=0 L=24 W=0
+--       effect: registers[operandL[pc]]=(operandL);
+-- 1280  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1281  OP_284  R=25 L=7 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1282  OP_284  R=26 L=9 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1283  OP_284  R=27 L=10 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1284  OP_284  R=28 L=11 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1285  OP_182  R=27 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 1286  OP_195  R=28 K=301 L=498 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1287  OP_284  R=29 L=12 W=0
+--       effect: (registers)[operandR[pc]]=(B[35][operandL[pc]]);
+-- 1288  OP_195  R=30 K="\ufffd\ufffd\ufffdS\ufffd" L=218 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1289  OP_195  R=31 K=4 L=47 W=0
+--       effect: registers[operandR[pc]]=(operandK[pc]);
+-- 1290  OP_032  R=0 L=32 W=0
+--       effect: registers[operandL[pc]]=(nil);
+-- 1291  OP_155  R=29 L=4 W=0
+--       effect: C=(operandR[pc]);p=(C+operandL[pc]-1);registers[C]=registers[C](B[28](C+1,p,registers));p=C;
+-- 1292  OP_155  R=26 L=4 W=0
+--       effect: C=(operandR[pc]);p=(C+operandL[pc]-1);registers[C]=registers[C](B[28](C+1,p,registers));p=C;
+-- 1293  OP_182  R=25 L=0 W=0
+--       effect: if B[35]~=B[41]then C=(operandR[pc]);(registers)[C]=registers[C](registers[C+1]);p=C;end;
+-- 1294  OP_124  R=1658 O=9010 L=25 W=25
+--       effect: registers[operandL[pc]]=operandO[pc]+registers[operandW[pc]];
+-- 1295  OP_070  R=1057 O=-9027 L=25 W=25
+--       effect: registers[operandL[pc]]=registers[operandW[pc]]+operandO[pc];
+-- 1296  OP_152  R=477 O=810 L=24 W=25
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1297  OP_215  A=673 R=45 O=79 L=23 W=1082
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1298  OP_088  R=17 L=0 W=32
+--       effect: for M=operandR[pc],operandW[pc],1 do registers[M]=nil;end;
+-- 1299  OP_187  R=0 L=0 W=673
+--       effect: pc=operandW[pc];
+-- 1300  OP_215  A="MinSize" R=1468 O=113 L=14 W=2108
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1301  OP_215  A="0" R=1503 O=190 L=14 W=402
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1302  OP_215  A="NextNumber" R=856 O=173 L=14 W=1007
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1303  OP_215  A="yield" R=814 O=37 L=14 W=1321
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1304  OP_215  A="UIPadding" R=1937 O=115 L=14 W=1273
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1305  OP_174  A=function_352 R=15 L=0 W=22
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1306  OP_152  R=1016 O=313 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1307  OP_174  A=function_353 R=15 L=0 W=94
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1308  OP_187  R=0 L=0 W=987
+--       effect: pc=operandW[pc];
+-- 1309  OP_193  R=23 L=0 W=0
+--       effect: registers[operandR[pc]]=operandW;
+-- 1310  OP_127  R=611 O=225 K=67 L=429 W=25
+--       effect: (registers)[operandW[pc]]=(operandO[pc]<operandK[pc]);
+-- 1311  OP_000  R=757 L=0 W=25
+--       effect: if not(not registers[operandW[pc]])then else pc=operandR[pc];end;
+-- 1312  OP_187  R=0 L=0 W=918
+--       effect: pc=operandW[pc];
+-- 1313  OP_187  R=0 L=0 W=1308
+--       effect: pc=operandW[pc];
+-- 1314  OP_152  R=790 O=436 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1315  OP_215  A="IsA" R=1169 O=161 L=14 W=1822
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1316  OP_174  A=function_354 R=15 L=0 W=335
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1317  OP_152  R=1044 O=269 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1318  OP_187  R=0 L=0 W=320
+--       effect: pc=operandW[pc];
+-- 1319  OP_215  A="Enum" R=2348 O=165 L=14 W=2375
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1320  OP_174  A=function_355 R=15 L=0 W=315
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1321  OP_152  R=1654 O=388 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1322  OP_187  R=0 L=0 W=26
+--       effect: pc=operandW[pc];
+-- 1323  OP_174  A=function_356 R=15 L=0 W=195
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1324  OP_152  R=1021 O=252 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1325  OP_174  A=function_359 R=15 L=0 W=206
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1326  OP_152  R=1366 O=432 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1327  OP_215  A="3" R=1290 O=191 L=14 W=1109
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1328  OP_187  R=0 L=0 W=534
+--       effect: pc=operandW[pc];
+-- 1329  OP_152  R=669 O=493 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1330  OP_215  A="function" R=188 O=183 L=14 W=639
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1331  OP_174  A=function_360 R=15 L=0 W=200
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1332  OP_152  R=963 O=508 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1333  OP_215  A="next" R=1324 O=88 L=14 W=1827
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1334  OP_174  A=function_361 R=15 L=0 W=320
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1335  OP_152  R=366 O=325 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1336  OP_174  A=function_362 R=15 L=0 W=129
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1337  OP_152  R=1281 O=510 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1338  OP_174  A=function_363 R=15 L=0 W=177
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1339  OP_152  R=2151 O=270 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1340  OP_174  A=function_364 R=15 L=0 W=150
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1341  OP_152  R=1175 O=495 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1342  OP_174  A=function_365 R=15 L=0 W=350
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1343  OP_152  R=559 O=239 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1344  OP_187  R=0 L=0 W=199
+--       effect: pc=operandW[pc];
+-- 1345  OP_152  R=1182 O=410 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1346  OP_174  A=function_366 R=15 L=0 W=364
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1347  OP_152  R=580 O=516 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1348  OP_174  A=function_367 R=15 L=0 W=361
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1349  OP_152  R=858 O=295 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1350  OP_187  R=0 L=0 W=474
+--       effect: pc=operandW[pc];
+-- 1351  OP_152  R=1580 O=284 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1352  OP_174  A=function_368 R=15 L=0 W=99
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1353  OP_152  R=1543 O=521 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1354  OP_187  R=0 L=0 W=1194
+--       effect: pc=operandW[pc];
+-- 1355  OP_152  R=1149 O=479 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1356  OP_174  A=function_369 R=15 L=0 W=87
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1357  OP_152  R=1797 O=529 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1358  OP_174  A=function_370 R=15 L=0 W=64
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1359  OP_152  R=1210 O=255 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1360  OP_187  R=0 L=0 W=442
+--       effect: pc=operandW[pc];
+-- 1361  OP_152  R=1832 O=267 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1362  OP_174  A=function_371 R=15 L=0 W=217
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1363  OP_152  R=1574 O=467 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1364  OP_215  A="find" R=1246 O=14 L=14 W=2363
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1365  OP_187  R=0 L=0 W=272
+--       effect: pc=operandW[pc];
+-- 1366  OP_152  R=119 O=5 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1367  OP_174  A=function_372 R=15 L=0 W=109
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1368  OP_152  R=2065 O=216 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1369  OP_276  R=719 O="buffer" L=0 W=15
+--       effect: registers[operandW[pc]]=(d[operandO[pc]]);
+-- 1370  OP_187  R=0 L=0 W=533
+--       effect: pc=operandW[pc];
+-- 1371  OP_174  A=function_373 R=15 L=0 W=112
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1372  OP_193  R=2020 O=441 L=14 W=249
+--       effect: registers[operandR[pc]]=operandW;
+-- 1373  OP_011  R=51 L=14 W=137
+--       effect: C=(registers);U=operandL[pc];
+-- 1374  OP_211  R=42 L=209 W=55
+--       effect: C=(C[U]);
+-- 1375  OP_275  A="sub" R=86 O=25 L=184 W=832
+--       effect: U=(operandO[pc]);c=operandA[pc];
+-- 1376  OP_109  R=9 L=172 W=47
+--       effect: C[U]=(c);
+-- 1377  OP_215  A="RequestAsync" R=1344 O=150 L=14 W=1027
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1378  OP_215  A="AbsoluteSize" R=2334 O=124 L=14 W=1900
+--       effect: (registers[operandL[pc]])[operandO[pc]]=(operandA[pc]);
+-- 1379  OP_174  A=function_374 R=15 L=0 W=104
+--       effect: see ../luarmor_superflow_handlers/opcode_174.luau (447 chars)
+-- 1380  OP_152  R=2316 O=472 L=14 W=15
+--       effect: registers[operandL[pc]][operandO[pc]]=registers[operandW[pc]];
+-- 1381  OP_187  R=0 L=0 W=782
+--       effect: pc=operandW[pc];
