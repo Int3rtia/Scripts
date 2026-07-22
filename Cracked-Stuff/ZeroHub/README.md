@@ -2,6 +2,8 @@
 - **I'm not** going to leak their script. This repository only documents what I recovered before giving up.
 - Recovery status: fu*king gave up
 
+Discord: https://discord.gg/zNcwrNkMV
+
 ---
 
 bro before knowing that im cracking their script<br />
