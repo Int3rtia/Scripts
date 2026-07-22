@@ -91,4 +91,10 @@ end
 ```
 
 ## Anti-Tamper
-i dunno know to explain so i choose to not do it :p
+When I executed the script, I will get something like: <br />
+<img width="407" height="256" alt="image" src="https://github.com/user-attachments/assets/684613f0-43b5-4f3c-915f-e59b4958419c" />
+<img width="407" height="256" alt="image" src="https://github.com/user-attachments/assets/45be23cb-9ad1-4ed7-bb61-de772ab18c92" />
+<img width="407" height="256" alt="image" src="https://github.com/user-attachments/assets/453f39f3-aead-4353-963b-02d1fba6e928" />
+<br />
+So I made a patch script to hook before kicking start, Now I'm inside!
+
